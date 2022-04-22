@@ -13,7 +13,7 @@ The products produced in this project are listed according to the product code a
 
 Projeyi şuradan klonlayabilirsiniz:
 ```
-git clone https://github.com/orhunonar/Fake-or-True-News.git
+https://github.com/kalecaner/ProductionControlWithWeb3.git
 ```
 Projemin temeli olarak starter near projeyi kullandım. Burada bulabilirsiniz:
 ```

@@ -36,8 +36,9 @@ yarn build:release
 near dev-deploy ./build/release/simple.wasm
 ```
 7- Export the development account to the $CONTRACT
-
+```
 export CONTRACT=<YOUR_DEV_ACCOUNT_HERE>
+```
 ## Usage
 * Create a new Product or ProductCode
 ```
@@ -73,4 +74,4 @@ https://www.patika.dev/tr
 
 ## Loom video
 
-
+https://www.loom.com/share/6ec61f62613a437e9f7e28ec011ee903

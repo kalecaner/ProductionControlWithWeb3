@@ -33,7 +33,7 @@ import {
       this.produceUnit = produceUnit;
       this.produtionDate = produtionDate;
       this.amountofUnits = amountofUnits;
-      this.productionTonnage =density*(width/1000)*(lenght/1000)*(thickness/1000)*produceUnit;
+      this.productionTonnage =(density*width*lenght*thickness*produceUnit*amountofUnits)/1000000000;
 
       
 

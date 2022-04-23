@@ -1,9 +1,9 @@
 import { Product, PartialProduct } from "./model";
 
 export function createProduct(
-  productCode: string, productType: string,productLine: string,density:u64,width: u64,lenght: u64,thickness: u64,amountofUnits:u64,produtionDate:string
+  productCode: string, productType: string,productLine: string,density:u64,width: u64,lenght: u64,thickness:u64,produceUnit:u64,amountofUnits:u64,produtionDate:string
 ): Product {
-  return Product.addProduct(productCode, productType,productLine,density,width,lenght,thickness,amountofUnits,produtionDate);
+  return Product.addProduct(productCode, productType,productLine,density,width,lenght,thickness,produceUnit,amountofUnits,produtionDate);
 }
 
 export function getProductById(id: u32): Product {

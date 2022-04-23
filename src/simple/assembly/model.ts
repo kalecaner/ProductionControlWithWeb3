@@ -1,9 +1,7 @@
 import {
     PersistentUnorderedMap,
     math,
-    PersistentVector,
-    Context,
-    u128,
+    Context    
   } from "near-sdk-as";
   type AccountId = string;
   @nearBindgen
@@ -23,7 +21,7 @@ import {
     produtionDate:string;//dd-mm-yyyy
 
   
-    constructor(productCode: string, productType: string,productLine: string,density:u64,width: u64,lenght: u64,thickness: u64,amountofUnits:u64,produtionDate:string) {
+    constructor(productCode: string, productType: string,productLine: string,density:u64,width: u64,lenght: u64,thickness: u64, produceUnit:u64,amountofUnits:u64,produtionDate:string) {
       this.id = math.hash32<string>(productCode);
       this.productCode = productCode;
       this.productType = productType;
@@ -31,15 +29,17 @@ import {
       this.density = density;
       this.width = width;
       this.lenght = lenght;
+      this.thickness = thickness;
+      this.produceUnit = produceUnit;
       this.produtionDate = produtionDate;
       this.amountofUnits = amountofUnits;
-      this.productionTonnage =density*(width/1000)*(lenght/1000)*(thickness/1000);
+      this.productionTonnage =density*(width/1000)*(lenght/1000)*(thickness/1000)*produceUnit;
 
       
 
     }
-    static addProduct(productCode: string, productType: string,productLine: string,density:u64,width: u64,lenght: u64,thickness: u64,amountofUnits:u64,produtionDate:string): Product {
-        const product = new Product(productCode, productType,productLine,density,width,lenght,thickness,amountofUnits,produtionDate);
+    static addProduct(productCode: string, productType: string,productLine: string,density:u64,width:u64,lenght:u64,thickness:u64,produceUnit:u64,amountofUnits:u64,produtionDate:string): Product {
+        const product = new Product(productCode, productType,productLine,density,width,lenght,thickness,produceUnit,amountofUnits,produtionDate);
         products.set(product.id, product);
     
         return product;

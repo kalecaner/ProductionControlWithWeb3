@@ -1,7 +1,8 @@
 import {
     PersistentUnorderedMap,
     math,
-    Context    
+    Context,
+    PersistentVector    
   } from "near-sdk-as";
   type AccountId = string;
   @nearBindgen
@@ -78,7 +79,7 @@ import {
       }
 }
   export const products = new PersistentUnorderedMap<u32, Product>("p");
-    
+  export const productListStorage = new PersistentVector<Product>("pl");
   @nearBindgen
   export class PartialProduct {
     productCode: string;

@@ -53,7 +53,7 @@ near view $CONTRACT getProductById '{"id":"<Product-ID>"}' --accountId YOUR-ACCO
 ```
 * Update Product Data
 ```
-near call $CONTRACT updateProduct '{"id":"<Product-ID>","updates":{"productCode":"<Product Code>","productType":"<Product Type>","productLine":"<Line Name>","density":"<Density Value>","width":"<Width Value>","lenght":"<Lenght Value>","thickness":"<Thickness Value>","amountofUnits":"<Amount of Units>","produtionDate":"<dd.mm.yyyy>"}}' --accountId YOUR-ACCOUNT.testnet
+near call $CONTRACT updateProduct '{"id":"<Product-ID>","updates":{"productCode":"<Product Code>","productType":"<Product Type>","productLine":"<Line Name>","density":"<Density Value>","width":"<Width Value>","lenght":"<Lenght Value>","thickness":"<Thickness Value>","produceUnit":"<produce Unit Value>","amountofUnits":"<Amount of Units>","produtionDate":"<dd.mm.yyyy>"}}' --accountId YOUR-ACCOUNT.testnet
 ```
 * Delete Product by ID
 ```

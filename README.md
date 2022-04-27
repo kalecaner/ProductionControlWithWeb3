@@ -10,6 +10,12 @@ The products produced in this project are listed according to the product code a
 - yarn(npm install -g yarn)
 - near-cli
 ```
+## Scripts 
+```
+./scripts/1.dev-deploy.sh
+```
+It creates a new testnet account and deply the contract into it automatically.
+
 ## Installation
 1- Clone repository to your computer
 ```

@@ -1,8 +1,12 @@
 import { Product, PartialProduct,productListStorage } from "./model";
+import { storage, Context, context, ContractPromiseBatch, u128 } from "near-sdk-as"
 
 export function createProduct(
   productCode: string, productType: string,productLine: string,density:u64,width: u64,lenght: u64,thickness:u64,produceUnit:u64,amountofUnits:u64,produtionDate:string
 ): Product {
+  assert_IsShift()
+  let id = storage.getSome<u32>("currentID")
+  storage.set("currentID", id + 1)
   return Product.addProduct(productCode, productType,productLine,density ,width,lenght,thickness,produceUnit,amountofUnits,produtionDate);
 }
 
@@ -37,4 +41,16 @@ export function getFromChainData():Product[]{
     list[i]=productListStorage[i+startIndex];
   }
   return list;
+}
+export function Saveshift(): void {
+  assert_shift()
+  storage.setString("shift", context.sender)
+  storage.set("currentID", 0)
+}
+
+function assert_shift(): void {
+  assert(!storage.hasKey("shift"), "Shift initialized before!")
+}
+function assert_IsShift(): void {
+  assert(context.predecessor == storage.getString("shift"), "Only shift may call this function!")
 }

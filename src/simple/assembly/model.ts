@@ -34,9 +34,7 @@ import {
       this.produceUnit = produceUnit;
       this.produtionDate = produtionDate;
       this.amountofUnits = amountofUnits;
-      this.productionTonnage =(density*width*lenght*thickness*produceUnit*amountofUnits)/1000000000;
-
-      
+      this.productionTonnage =(density*width*lenght*thickness*produceUnit*amountofUnits)/1000000000;     
 
     }
     static addProduct(productCode: string, productType: string,productLine: string,density:u64,width:u64,lenght:u64,thickness:u64,produceUnit:u64,amountofUnits:u64,produtionDate:string): Product {

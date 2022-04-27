@@ -10,11 +10,7 @@ The products produced in this project are listed according to the product code a
 - yarn(npm install -g yarn)
 - near-cli
 ```
-## Scripts 
-```
-./scripts/1.dev-deploy.sh
-```
-It creates a new testnet account and deply the contract into it automatically.
+
 
 ## Installation
 1- Clone repository to your computer
@@ -45,6 +41,18 @@ near dev-deploy ./build/release/simple.wasm
 ```
 export CONTRACT=<YOUR_DEV_ACCOUNT_HERE>
 ```
+## Scripts 
+```
+./scripts/1.dev-deploy.sh
+```
+It creates a new testnet account and deply the contract into it automatically.
+```
+./scripts/2.use-createproduct.sh
+```
+1. Initiates the contract
+2. Creates product
+
+
 ## Usage
 * Create a new Product or ProductCode
 ```

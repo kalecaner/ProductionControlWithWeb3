@@ -36,8 +36,9 @@ yarn build:release
 near dev-deploy ./build/release/simple.wasm
 ```
 7- Export the development account to the $CONTRACT
-
+```
 export CONTRACT=<YOUR_DEV_ACCOUNT_HERE>
+```
 ## Usage
 * Create a new Product or ProductCode
 ```
@@ -59,9 +60,18 @@ near call $CONTRACT updateProduct '{"id":"<Product-ID>","updates":{"productCode"
 ```
 near call $CONTRACT DelProduct '{"id":"<Product-ID>"}' --accountId YOUR-ACCOUNT.testnet
 ```
+* Save Product to Chain
+```
+near call $CONTRACT SaveProduct '{"productCode":"<Product Code>","productType":"<Product Type>","productLine":"<Line Name>","density":"<Density Value>","width":"<Width Value>","lenght":"<Lenght Value>","thickness":"<Thickness Value>","amountofUnits":"<Amount of Units>","produtionDate":"<dd.mm.yyyy>"}' --accountId YOUR-ACCOUNT.testnet
+```
+* Read Product from Chain
+```
+nnear call $CONTRACT getFromChainData --accountId YOUR-ACCOUNT.testnet
+```
+
 ## Patika
 https://www.patika.dev/tr
 
 ## Loom video
 
-
+https://www.loom.com/share/6ec61f62613a437e9f7e28ec011ee903

@@ -54,6 +54,14 @@ It creates a new testnet account and deply the contract into it automatically.
 
 
 ## Usage
+*Initialize contract by shift
+```
+near call $CONTRACT Saveshift '{}' --accountId $CONTRACT
+```
+This function can only be called once
+Sets the function caller as shift
+Does not take any parameters
+
 * Create a new Product or ProductCode
 ```
 near call $CONTRACT createProduct '{"productCode":"<Product Code>","productType":"<Product Type>","productLine":"<Line Name>","density":"<Density Value>","width":"<Width Value>","lenght":"<Lenght Value>","thickness":"<Thickness Value>","amountofUnits":"<Amount of Units>","produtionDate":"<dd.mm.yyyy>"}' --accountId YOUR-ACCOUNT.testnet

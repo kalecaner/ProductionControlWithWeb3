@@ -58,9 +58,7 @@ It creates a new testnet account and deply the contract into it automatically.
 ```
 near call $CONTRACT Saveshift '{}' --accountId $CONTRACT
 ```
-This function can only be called once
-Sets the function caller as shift
-Does not take any parameters
+This function can only be called once,Sets the function caller as shift and Does not take any parameters
 
 * Create a new Product or ProductCode
 ```
